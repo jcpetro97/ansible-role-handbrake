@@ -1,0 +1,20 @@
+---
+
+- name: Debian/Ubuntu Family | Adding Handbrake repository 
+  apt_repository:
+    repo: "{{ handbrake_repo_debian }}"
+    state: "{{ handbrake_repo_desired_state }}"
+    update_cache: yes
+
+- name: Debian/Ubuntu Family | Installing handbrake-gtk
+  apt:
+    name: "{{ handbrake_gtk_packege }}"
+    state: "{{ handbrake_desired_state }}"
+    force_apt_get: yes
+    update_cache: yes
+- name: Debian/Ubuntu Family | Installing handbrake-cli
+  apt:
+    name: "{{ handbrake_cli_packege }}"
+    state: "{{ handbrake_desired_state }}"
+    force_apt_get: yes
+    update_cache: yes

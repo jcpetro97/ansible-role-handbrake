@@ -1,0 +1,6 @@
+---
+handbrake_repo_debian: ppa:stebbins/handbrake-releases
+handbrake_gtk_packege: handbrake-gtk
+handbrake_cli_packege: handbrake-cli
+handbrake_repo_desired_state: present
+handbrake_desired_state: present
